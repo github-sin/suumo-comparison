@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "SUUMO物件比較ツール",
+  "version": "1.0.0",
+  "description": "SUUMOの賃貸物件を比較リストに追加して一覧表示します",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://api.gumroad.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://suumo.jp/chintai/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>SUUMO物件比較</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div class="header">
+    <h1>🏠 SUUMO物件比較ツール</h1>
+    <span class="plan-badge" id="plan-badge">無料版</span>
+  </div>
+
+  <!-- ツールバー -->
+  <div class="toolbar">
+    <span id="count-label" class="count-label">0件を比較中</span>
+    <div class="toolbar-btns">
+      <button id="csv-btn" class="btn-csv">
+        CSVエクスポート <span class="pro-badge">PRO</span>
+      </button>
+      <button id="clear-btn" class="btn-clear">全てクリア</button>
+    </div>
+  </div>
+
+  <!-- 比較テーブル -->
+  <div class="table-wrapper" id="table-wrapper">
+    <table class="compare-table" id="compare-table">
+      <thead>
+        <tr>
+          <th class="col-name">物件名</th>
+          <th class="col-rent">家賃</th>
+          <th class="col-mgmt">管理費</th>
+          <th class="col-layout">間取り</th>
+          <th class="col-area">面積</th>
+          <th class="col-station">駅徒歩</th>
+          <th class="col-age">築年数</th>
+          <th class="col-floor">階</th>
+          <th class="col-dir">向き</th>
+          <th class="col-addr">所在地</th>
+          <th class="col-del"></th>
+        </tr>
+      </thead>
+      <tbody id="compare-tbody"></tbody>
+    </table>
+    <div id="empty-msg" class="empty-msg hidden">
+      SUUMOの物件詳細ページを開いて<br>「＋ 比較リストに追加」ボタンを押してください
+    </div>
+  </div>
+
+  <!-- 上限警告 -->
+  <div id="limit-warn" class="limit-warn hidden">
+    ⚠️ 無料版は3件まで比較できます。
+    <a class="pro-link" href="https://aiunyoulabo.gumroad.com/l/PLACEHOLDER" target="_blank">Pro版で無制限に比較する</a>
+  </div>
+
+  <!-- ライセンス認証 -->
+  <div class="license-section">
+    <div class="license-row">
+      <input type="text" id="license-input"
+             placeholder="ライセンスキーを入力" maxlength="100" spellcheck="false">
+      <button id="license-btn">認証する</button>
+    </div>
+    <p id="license-status" class="license-status"></p>
+  </div>
+
+  <!-- フッター -->
+  <div class="footer-links">
+    <a class="pro-link" href="https://aiunyoulabo.gumroad.com/l/PLACEHOLDER"
+       target="_blank">▶ Pro版で無制限に比較する</a>
+    <a href="https://forms.gle/PLACEHOLDER"
+       target="_blank" id="feedback-link">不具合・改善報告</a>
+    <span style="font-size:11px; color:#bbb;">v1.0.0</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
