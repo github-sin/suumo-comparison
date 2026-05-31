@@ -189,11 +189,33 @@ h1 {
 
 /* Empty message */
 .empty-msg {
-  text-align: center;
-  color: #aaa;
-  padding: 36px 20px;
+  text-align: left;
+  color: #555;
+  padding: 24px 28px;
   font-size: 13px;
-  line-height: 2;
+  line-height: 1.8;
+}
+
+.empty-title {
+  font-weight: 700;
+  color: #4a8c3a;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.empty-steps {
+  padding-left: 18px;
+  margin-bottom: 12px;
+}
+
+.empty-steps li {
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.empty-note {
+  font-size: 12px;
+  color: #999;
 }
 
 /* ---- Limit warning ---- */
