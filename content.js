@@ -5,8 +5,10 @@ console.log('[SUUMOCompare] content.js loaded on:', window.location.href);
 const FREE_LIMIT = 3;
 const BTN_ID = 'suumo-compare-btn';
 
-// 物件詳細ページ（jnc_ / bc_）のみ動作
-if (window.location.pathname.match(/\/chintai\/(jnc_|bc_)/)) {
+// jnc_（個別部屋ページ）のみ動作
+if (window.location.pathname.match(/\/chintai\/bc_/)) {
+  console.log('[SUUMOCompare] bc_ page detected, skipping (use jnc_ room pages)');
+} else if (window.location.pathname.match(/\/chintai\/jnc_/)) {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
